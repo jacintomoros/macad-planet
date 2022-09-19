@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- FAVICON -->
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static',filename='favicon/apple-touch-icon.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static',filename='favicon/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static',filename='favicon/favicon-16x16.png')}}">
+  <link rel="manifest" href="{{url_for('static',filename='favicon/site.webmanifest')}}">
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>PLANET MACAD</title>
+    <style>
+        h1{text-align:center;}
+    </style>
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+
+<body>
+  <h1> 
+    <b>
+      Urban Pixel Generative AI 
+    </b>
+  </h1>
+
+  
+  
+  <form style="text-align: center;" action="/", method="post", enctype="multipart/form-data">
+    <div >
+      <h2 > Draw your pixel to predict your landscape!</h2>
+      <!-- <div >
+        <label for="toggleGuide">Show Guide: </label>
+        <input type="checkbox" id="toggleGuide" checked>
+        
+      </div> -->
+      
+    </div>
+
+    <select id="colorInput">
+        <option value="" selected disabled hidden>-- Select Pixel Landscape --</option>
+        <option class="salt_flats" value="#ffffff">Salt Flats</option>
+        <option class="forest" value="#FF0000">Forest</option>
+        <option class="grasslands" value="#32CD32">Grasslands</option>
+        <option class="deep_waters" value="#0000FF">Deep Waters</option>
+        <option class="mountain" value="#FF00FF">Mountain</option>
+        <option class="shallow_waters" value="#00FFFF">Shallow Waters</option>
+        <option class="dessert" value="#FFFF00">Dessert</option>
+         
+    </select>
+    <button type="button" id="clearButton">Clear</button>
+
+
+    
+
+    <div >
+      <div id="guide"></div>
+      <img id="inp" src="{{ user_pixel }}" height="0px" width="0px">
+      <canvas width="600" height="600" id="canvas"></canvas>
+      <!-- <img id="imgemployment" src="{{ user_pixel }}" height="600px" width="600px"> -->
+      <img id="imgpopulation" src="{{ user_image }}" height="600px" width="600px">
+
+    </div>
+      
+    <input type="hidden" id = 'url' name="url" value="">
+    <input id="predict" type="submit" value="Predict image" onclick="return save();">
+
+  </form>
+  <img id='credits' src="{{url_for('static', filename='images/credits.png')}}">
+
+  <!-- <a><img id='credits' src="{{url_for('static', filename='images/credits.png')}}"></a> -->
+
+  <script src = "{{url_for('static', filename='js/main.js')}}"></script>
+
+  
+</body>
+</html>

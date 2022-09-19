@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+#canvas {
+cursor: pointer;
+}
+
+#guide {
+/* margin-left: 48px; */
+margin-left: 351px;
+display: grid;
+pointer-events: none;
+position: absolute;
+border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#guide div {
+border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#inp{
+    opacity: 0;
+}
+
+html { 
+    background: url(/static/images/GF2_PMS2__L1A0001768200-MSS2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body{
+    color: white;
+    font-family:'Bebas Neue' ;
+    font-size: 20px;
+    text-shadow: 2px 0 rgb(0, 0, 0), -2px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0), 0 -2px rgb(0, 0, 0),
+               1px 1px rgb(0, 0, 0), -1px -1px rgb(0, 0, 0), 1px -1px rgb(0, 0, 0), -1px 1px #fff;
+  }
+
+button{
+    font-family:'Bebas Neue' ;
+  }
+
+#predict{
+    font-family:'Bebas Neue' ;
+    font-size: 40px;
+  }
+
+  input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+#credits{
+    position: absolute;
+    z-index: 999;
+    bottom: 5px;
+    width: 300px;
+}
+
+select{
+    font-family:'Bebas Neue' ;
+    font-size: 20px;
+}
+.salt_flats{
+    background-color: #ffffff;
+}
+.forest{
+    background-color: #FF0000 ;
+}
+.grasslands{
+    background-color: #32CD32;
+}
+.deep_waters{
+    background-color: #0000FF;
+}
+.mountain{
+    background-color: #FF00FF;
+}
+.shallow_waters{
+    background-color: #00FFFF;
+}
+.dessert{
+    background-color: #FFFF00;
+}
